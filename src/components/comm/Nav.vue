@@ -1,6 +1,7 @@
 <template>
   <div id="nav">
     <div class="nav" @click="send">{{ navMsg }}</div>
+    <div></div>
   </div>
 </template>
 

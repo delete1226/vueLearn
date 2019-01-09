@@ -7,6 +7,7 @@
       </li>
     </ul>
     <span  v-show="flg">{{ txt }}</span>
+    <div></div>
   </div>
 </template>
 
