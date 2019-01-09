@@ -1,6 +1,6 @@
 <template>
   <div class="index">
-    <!-- <NavList :navMsg="navMsg" @getChidValue="getValue"></NavList> -->
+    <NavList :navMsg="navMsg" @getChidValue="getValue"></NavList>
     <ul>
       <li :key="item.id" v-for="(item, index) in todos" @click="testClick(index)">
         {{ item.text }} - {{ index }}
@@ -11,9 +11,13 @@
 </template>
 
 <script>
+import Nav from './comm/Nav'
 
 export default {
   name: 'Index',
+  components: {
+    NavList: Nav
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
