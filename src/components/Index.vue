@@ -26,9 +26,10 @@ export default {
       navMsg: '首页导航',
       flg: false,
       todos: [
-        { text: 'JavaScript' },
-        { text: 'Vue' },
-        { text: 'jQuery' }
+        { text: '首页' },
+        { text: '赛事' },
+        { text: '资讯' },
+        { text: '专题' }
       ]
     }
   },
