@@ -15,7 +15,7 @@
       </li>
       <li>
         <a href="https://vuejs.org" target="_blank" >
-          Community Chat
+          Community Ch
         </a>
       </li>
       <li>
