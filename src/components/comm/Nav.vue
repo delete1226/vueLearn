@@ -1,11 +1,11 @@
 <template>
   <div id="nav">
     <div class="nav" @click="send">{{ navMsg }}</div>
-    <div></div>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'Nav',
   props: ['navMsg'],
@@ -23,5 +23,5 @@ export default {
 </script>
 
 <style scoped>
-.nav{width: 100%; text-align: center; font-size: 36px; position: fixed; top: 0}
+.nav {width: 100%; text-align: center; font-size: 36px; position: fixed; top: 0}
 </style>
