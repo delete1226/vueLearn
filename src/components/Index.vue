@@ -1,6 +1,6 @@
 <template>
   <div class="index" id="index">
-    <NavList :navMsg="navMsg" @getChidValue="getValue"></NavList>
+    <NavList :navMsg="navMsg" :navData="todos" @getChidValue="getValue"></NavList>
     <ul>
       <li :key="item.id" v-for="(item, index) in todos" @click="testClick(index)">
         {{ item.text }} - {{ index }}
