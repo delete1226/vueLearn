@@ -16,13 +16,14 @@ export default {
   methods: {
   },
   created: function () {
+    console.log(this.userName)
     // console.log(this.$route.params.id)
     // this.userName = this.$route.params.id
     // console.log(this.userName)
-    // console.log(this.mapGetters.userName)
-    // if (this.mapGetters.userName) {
-    //   this.$router.push({name: 'Index'})
-    // }
+    // console.log(this.userName)
+    if (!this.userName) {
+      this.$router.push({name: 'Index'})
+    }
     // console.log(this.navData)
   },
   computed: {
