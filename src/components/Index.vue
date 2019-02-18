@@ -23,7 +23,7 @@
 <script>
 import Nav from './comm/Nav'
 import html2canvas from 'html2canvas'
-import {mapGetters, mapActions} from 'vuex'
+import {mapActions} from 'vuex'
 
 export default {
   name: 'Index',
@@ -63,7 +63,7 @@ export default {
       console.log(this.$refs.input1.value)
       this.userName = this.$refs.input1.value
       if (this.userName) {
-        setUserName(this.userName)
+        this.setUserName(this.userName)
         this.$router.push({name: 'Personal'})
       }
     },
