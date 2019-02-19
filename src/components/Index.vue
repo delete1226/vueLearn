@@ -87,5 +87,5 @@ li {display: inline-block; margin: 0 10px;}
 a {color: #42b983; cursor: pointer;}
 .btn_pic {width: 100px; height: 50px; border-radius: 100px; text-align: center; line-height: 50px; background: chartreuse; margin: 50px auto 0;}
 .form{margin: 30px 0}
-.btnLogin{width: 100px; height: 50px; text-align: center; line-height: 50px; border-radius: 25px; background: #4395ff; color: #fff; display: block; margin: 0 auto; display: block;}
+.btnLogin{width: 100px; height: 50px; text-align: center; line-height: 50px; border-radius: 25px; background: #4395ff; color: #fff; display: block; margin: 0 auto; display: block; text-decoration: none; font-size: 20px;}
 </style>
