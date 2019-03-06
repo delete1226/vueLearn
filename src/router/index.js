@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/components/Index'
+import List from '@/components/comm/List'
 // import Personal from '@/components/Personal'
 
 // 实现路由懒加载
@@ -12,13 +13,17 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Index',
-      component: Index
+      components: {
+        default: Index,
+        a: List
+      }
     },
     {
       path: '/components/Personal',
       name: 'Personal',
-      component: Personal
+      components: {
+        default: Personal
+      }
     }
   ]
 })
