@@ -7,7 +7,7 @@
       </li>
     </ul> -->
     <div class="form">
-      <span>帐号</span>
+      <span :class="[classFlag>0? 'ok' : 'not']">帐号</span>
       <input type="text" value="" ref="input1">
     </div>
     <div class="form">
@@ -43,7 +43,8 @@ export default {
         { text: '赛事' },
         { text: '资讯' },
         { text: '专题' }
-      ]
+      ],
+      classFlag: 0
     }
   },
   methods: {
