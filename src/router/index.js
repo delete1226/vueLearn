@@ -3,9 +3,11 @@ import Router from 'vue-router'
 import Index from '@/components/Index'
 import List from '@/components/comm/List'
 // import Personal from '@/components/Personal'
+// import Login from '@/components/Login'
 
 // 实现路由懒加载
 const Personal = () => import('@/components/Personal')
+const Login = () => import('@/components/Login')
 
 Vue.use(Router)
 
@@ -14,8 +16,7 @@ export default new Router({
     {
       path: '/',
       components: {
-        default: Index,
-        a: List
+        default: Index
       }
     },
     {
@@ -23,6 +24,14 @@ export default new Router({
       name: 'Personal',
       components: {
         default: Personal
+      }
+    },
+    {
+      path: '/components/Login',
+      name: 'Login',
+      components: {
+        default: Login,
+        a: List
       }
     }
   ]
