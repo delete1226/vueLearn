@@ -27,7 +27,7 @@ export default {
       this.$router.push({name: 'Login'})
     },
     queryList: function () {
-      this.$http.get('http://localhost:3000/dj/program?rid=336355127').then((response) => {
+      this.$http.get('http://localhost:3000/dj/program/', {params: {rid: 336355127}}).then((response) => {
         console.log(response.data)
       }).catch(error => console.log(error))
     }
@@ -37,4 +37,5 @@ export default {
 
 <style scoped>
 .index { width: 100%; height: 100%; background: url(../assets/bg1.jpg)}
+span {color: #fff}
 </style>
