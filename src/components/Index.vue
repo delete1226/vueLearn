@@ -1,41 +1,60 @@
 <template>
   <div id="Index" class="index">
-   <a href="javascript:;" @click="queryList">hello Word</a>
-   <NavHeader>
-    <div class="tmpl">
-      <span>菜单1</span>
-      <span>菜单2</span>
-      <span>菜单3</span>
-      <span>菜单4</span>
-      <span>菜单5</span>
-      <span>菜单6</span>
-    </div>
-   </NavHeader>
+   <NavHeader></NavHeader>
+   <Footer :footMsg="footmsg" @getFooterMsg="setFooterMsg"></Footer>
+   <ModelVue v-if="showStatus" v-model="showStatus"></ModelVue>
+   <div>{{ text | trim(1) }}</div>
+   <div>{{fullname}}</div>
+   <button @click="setname">点击改变name</button>
   </div>
 </template>
 
 <script>
 import Header from './comm/Header'
+import Footer from './comm/Footer'
+import ModelVue from './comm/ModelVue'
 
 export default {
   name: 'Index',
   components: {
-    NavHeader: Header
+    NavHeader: Header,
+    Footer: Footer,
+    ModelVue: ModelVue
+  },
+  data () {
+    return {
+      footmsg: '摸鱼生产中队',
+      showStatus: true,
+      text: '           1',
+      firstname: 'huang',
+      lastname: '12'
+      // fullname: ''
+    }
   },
   methods: {
-    goto: function () {
-      this.$router.push({name: 'Login'})
+    setFooterMsg: function (val) {
+      this.footmsg = val
+      console.log(val)
     },
-    queryList: function () {
-      this.$http.get('http://localhost:3000/dj/program/', {params: {rid: 336355127}}).then((response) => {
-        console.log(response.data)
-      }).catch(error => console.log(error))
+    setname: function () {
+      // this.firstname = 'zx'
+      this.$router.push({name: 'Personal'})
+    }
+  },
+  computed: {
+    fullname: function () {
+      return this.firstname + this.lastname
+    }
+  },
+  watch: {
+    firstname: function (val) {
+      console.log(val)
+      this.fullname = val + this.lastname
     }
   }
 }
 </script>
 
 <style scoped>
-.index { width: 100%; height: 100%; background: url(../assets/bg1.jpg)}
-span {color: #fff}
+.index{width: 100%; height: 100%;}
 </style>

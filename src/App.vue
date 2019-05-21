@@ -20,7 +20,7 @@ h1,h2,h3,h4,h5,h6{font-size:100%;}
 em,i,b{font-style:normal}
 ul,ol{list-style:none;margin:0;padding:0;}
 a{text-decoration:none;color:#fff}
-a:hover{text-decoration:underline}
+a:hover{text-decoration:none}
 a:focus{outline:none;}
 table{border-collapse:collapse;border-spacing:0}
 img{border: none;padding: 0;margin:0;}

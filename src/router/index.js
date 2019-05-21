@@ -8,6 +8,7 @@ import List from '@/components/comm/List'
 // 实现路由懒加载
 const Personal = () => import('@/components/Personal')
 const Login = () => import('@/components/Login')
+const Len = () => import('@/components/Len')
 
 Vue.use(Router)
 
@@ -32,6 +33,13 @@ export default new Router({
       components: {
         default: Login,
         a: List
+      }
+    },
+    {
+      path: '/components/Len',
+      name: 'Len',
+      components: {
+        default: Len
       }
     }
   ]

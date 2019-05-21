@@ -16,14 +16,14 @@ export default {
   methods: {
   },
   created: function () {
-    console.log(this.userName)
-    // console.log(this.$route.params.id)
-    // this.userName = this.$route.params.id
     // console.log(this.userName)
-    // console.log(this.userName)
-    if (!this.userName) {
-      this.$router.push({name: 'Index'})
-    }
+    // // console.log(this.$route.params.id)
+    // // this.userName = this.$route.params.id
+    // // console.log(this.userName)
+    // // console.log(this.userName)
+    // if (!this.userName) {
+    //   this.$router.push({name: 'Index'})
+    // }
     // console.log(this.navData)
   },
   computed: {
@@ -36,5 +36,5 @@ export default {
 </script>
 
 <style scoped>
-
+#personal{color: #fff; font-size: 26px;}
 </style>
